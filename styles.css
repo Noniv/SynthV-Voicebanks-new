@@ -439,7 +439,7 @@ nav.flexbox a:focus {
         color: #dddddd;
     }
     .voicebanks div {
-        min-width: 300px;
+        min-width: 250px;
         padding-top: 20px;
     }
 }
