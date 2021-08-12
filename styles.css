@@ -322,6 +322,7 @@ span {
     justify-content: flex-end;
     transition: transform 0.5s;
     border-radius: 100%;
+    text-align: center;
 }
 
 .voicebanks div:hover {
@@ -333,6 +334,7 @@ span {
     height: 100%;
     margin: 0 auto;
     max-height: 420px;
+    max-width: 100%;
 }
 
 .voicebanks div h2 {
