@@ -441,7 +441,7 @@ nav.flexbox a:focus {
         color: #dddddd;
     }
     .voicebanks div {
-        min-width: auto;
+        min-width: 300px;
         padding-top: 20px;
     }
 }
