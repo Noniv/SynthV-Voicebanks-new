@@ -1,13 +1,12 @@
+:root {
+    color-scheme: dark;
+}
+
 * {
     margin: 0;
     padding: 0;
     font-family: "Roboto", sans-serif;
     color: #cccccc;
-}
-
-::-webkit-scrollbar {
-    display: none;
-    overflow-x: hidden;
 }
 
 body {
@@ -214,7 +213,7 @@ span {
         font-size: 30px;
     }
 
-    .language img{
+    .language img {
         display: none;
     }
 
@@ -256,7 +255,7 @@ span {
         max-height: 6vw;
     }
 
-    .introduction{
+    .introduction {
         width: 85%;
     }
 
@@ -274,11 +273,11 @@ span {
         font-size: 9vw;
     }
 
-    .languages .flexbox{
+    .languages .flexbox {
         padding-top: 50px;
     }
 
-    .languages{
+    .languages {
         padding-bottom: 50px;
     }
 }
@@ -373,7 +372,6 @@ nav.flexbox a:hover {
 nav.flexbox a:focus {
     box-shadow: 0 0 40px 0 rgba(255, 255, 255, 0.4);
 }
-
 
 @media only screen and (max-width: 1280px) {
     nav.flexbox a {
