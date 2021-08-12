@@ -1,0 +1,53 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SynthhesizerV Voicebanks</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <section class="voices">
+            <a href="index.html" class="main-logo">
+                <img src="img/logo.svg" alt="Logo of SynthhesizerV" />
+                <h1>Synthesizer <span>V</span> Studio <span>V</span>oicebanks</h1>
+            </a>
+            <nav class="flexbox">
+                <a href="japanese.html">Japanese</a>
+                <h1>English <span>V</span>oices</h1>
+                <a href="chinese.html">Chinese</a>
+            </nav>
+            <p>Click on the character to hear it's sound!</p>
+        </section>
+        <section class="voicebanks">
+            <div onclick="playDemo('eleanor')">
+                <audio id="eleanor" src="snd/eleanor.mp3" preload="auto"></audio>
+                <img src="img/eleanor.png" />
+                <h2>Eleanor Forte</h2>
+            </div>
+            <div onclick="playDemo('solaria')">
+                <audio id="solaria" src="snd/solaria.mp3" preload="auto"></audio>
+                <img src="img/solaria.png" />
+                <h2>SOLARIA</h2>
+            </div>
+            <div onclick="playDemo('makieng')">
+                <audio id="makieng" src="snd/makieng.mp3" preload="auto"></audio>
+                <img src="img/makieng.png" />
+                <h2>Tsurumaki Maki (ENG)</h2>
+            </div>
+        </section>
+        <script>
+            function playDemo(voicebankId) {
+                var sounds = document.getElementsByTagName("audio");
+                for (i = 0; i < sounds.length; i++) {
+                    sounds[i].pause();
+                    sounds[i].currentTime = 0;
+                }
+                document.getElementById(voicebankId).play();
+            }
+        </script>
+    </body>
+</html>

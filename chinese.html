@@ -1,0 +1,73 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SynthhesizerV Voicebanks</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <section class="voices">
+            <a href="index.html" class="main-logo">
+                <img src="img/logo.svg" alt="Logo of SynthhesizerV" />
+                <h1>Synthesizer <span>V</span> Studio <span>V</span>oicebanks</h1>
+            </a>
+            <nav class="flexbox">
+                <a href="english.html">English</a>
+                <h1>Chinese <span>V</span>oices</h1>
+                <a href="japanese.html">Japanese</a>
+            </nav>
+            <p>Click on the character to hear it's sound!</p>
+        </section>
+        <section class="voicebanks">
+            <div onclick="playDemo('aiko')">
+                <audio id="aiko" src="snd/aiko.mp3" preload="auto"></audio>
+                <img src="img/aiko.png" />
+                <h2>Aiko</h2>
+            </div>
+            <div onclick="playDemo('cangqiong')">
+                <audio id="cangqiong" src="snd/cangqiong.mp3" preload="auto"></audio>
+                <img src="img/cangqiong.png" />
+                <h2>Cangqiong</h2>
+            </div>
+            <div onclick="playDemo('chiyu')">
+                <audio id="chiyu" src="snd/chiyu.mp3" preload="auto"></audio>
+                <img src="img/chiyu.png" />
+                <h2>Chiyu</h2>
+            </div>
+            <div onclick="playDemo('haiyi')">
+                <audio id="haiyi" src="snd/haiyi.mp3" preload="auto"></audio>
+                <img src="img/haiyi.png" />
+                <h2>Haiyi</h2>
+            </div>
+            <div onclick="playDemo('minus')">
+                <audio id="minus" src="snd/minus.mp3" preload="auto"></audio>
+                <img src="img/minus.png" />
+                <h2>Minus</h2>
+            </div>
+            <div onclick="playDemo('shian')">
+                <audio id="shian" src="snd/shian.mp3" preload="auto"></audio>
+                <img src="img/shian.png" />
+                <h2>Shian</h2>
+            </div>
+            <div onclick="playDemo('muxin')">
+                <audio id="muxin" src="snd/muxin.mp3" preload="auto"></audio>
+                <img src="img/muxin.png" />
+                <h2>Muxin</h2>
+            </div>
+        </section>
+        <script>
+            function playDemo(voicebankId) {
+                var sounds = document.getElementsByTagName("audio");
+                for (i = 0; i < sounds.length; i++) {
+                    sounds[i].pause();
+                    sounds[i].currentTime = 0;
+                }
+                document.getElementById(voicebankId).play();
+            }
+        </script>
+    </body>
+</html>

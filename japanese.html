@@ -1,0 +1,68 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SynthhesizerV Voicebanks</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <section class="voices">
+            <a href="index.html" class="main-logo">
+                <img src="img/logo.svg" alt="Logo of SynthhesizerV" />
+                <h1>Synthesizer <span>V</span> Studio <span>V</span>oicebanks</h1>
+            </a>
+            <nav class="flexbox">
+                <a href="english.html">English</a>
+                <h1>Japanese <span>V</span>oices</h1>
+                <a href="chinese.html">Chinese</a>
+            </nav>
+            <p>Click on the character to hear it's sound!</p>
+        </section>
+        <section class="voicebanks">
+            <div onclick="playDemo('makijp')">
+                <audio id="makijp" src="snd/makijp.mp3" preload="auto"></audio>
+                <img src="img/makijp.png" />
+                <h2>Tsurumaki Maki (JP)</h2>
+            </div>
+            <div onclick="playDemo('rikka')">
+                <audio id="rikka" src="snd/rikka.mp3" preload="auto"></audio>
+                <img src="img/rikka.png" />
+                <h2>Koharu Rikka</h2>
+            </div>
+            <div onclick="playDemo('saki')">
+                <audio id="saki" src="snd/saki.mp3" preload="auto"></audio>
+                <img src="img/saki.png" />
+                <h2>Saki</h2>
+            </div>
+            <div onclick="playDemo('kotonoha')">
+                <audio id="kotonoha" src="snd/kotonoha.mp3" preload="auto"></audio>
+                <img src="img/kotonoha.png" />
+                <h2>Kotonoha Aoi & Akane</h2>
+            </div>
+            <div onclick="playDemo('genbu')">
+                <audio id="genbu" src="snd/genbu.mp3" preload="auto"></audio>
+                <img src="img/genbu.png" />
+                <h2>Genbu</h2>
+            </div>
+            <div onclick="playDemo('renri')">
+                <audio id="renri" src="snd/renri.mp3" preload="auto"></audio>
+                <img src="img/renri.png" />
+                <h2>Yamine Renri</h2>
+            </div>
+        </section>
+        <script>
+            function playDemo(voicebankId) {
+                var sounds = document.getElementsByTagName("audio");
+                for (i = 0; i < sounds.length; i++) {
+                    sounds[i].pause();
+                    sounds[i].currentTime = 0;
+                }
+                document.getElementById(voicebankId).play();
+            }
+        </script>
+    </body>
+</html>
